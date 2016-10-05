@@ -1,4 +1,3 @@
-
 import java.util.*;
 import java.util.Calendar;
 
@@ -22,86 +21,114 @@ public class Address {
 	private boolean sync;
 	
 	
+        public Address(){
+            
+		
+        }
+        
 	//Construtores
 	public Address(String Country, String State, String City, String Zip, String Street, int Number){
-		country = Country;
-		state = State;
-		city = City;
-		zip = Zip;
-		street = Street;
-		number = Number;
-		
-		if(!setID(zip,number)){
-			return ;
-		}
-		
-		date = Calendar.getInstance();
+            this.country = Country;
+            this.state = State;
+            this.city = City;
+            this.zip = Zip;
+            this.street = Street;
+            this.number = Number;		
+            this.date = Calendar.getInstance();
 		
 	}
 	
-		public Address(String Country, String State, String City, String Neighboorhood, String Zip, String Street, int Number, String Complement){
-		country = Country;
-		state = State;
-		city = City;
-		neighboorhood = Neighboorhood;
-		complement = Complement;
-		zip = Zip;
-		street = Street;
-		number = Number;
-		
-		if(!setID(zip,number)){
-			return ;
-		}
-		
-		date = Calendar.getInstance();
+	public Address(String Country, String State, String City, String Neighboorhood, String Zip, String Street, int Number, String Complement){
+            this.country = Country;
+            this.state = State;
+            this.city = City;
+            this.neighboorhood = Neighboorhood;
+            this.complement = Complement;
+            this.zip = Zip;
+            this.street = Street;
+            this.number = Number;	
+            this.date = Calendar.getInstance();
 		
 	}
 	
 	//ID Get/Set
-	private boolean setID(String Zip, int Number){return true;};
+	//private boolean setID(String Zip, int Number){};
 	
-	public int getID(int Number,String Zip){return 1;};
-	public int getID(String Street, int Number){return 1;};
+	public int getID(){  
+            return this.id;
+        };
 
 	//Country get/set
-	public boolean setCountry(String newCountry){return true;};
+	public void setCountry(String newCountry){
+            this.country = newCountry;
+        };
 	
-	public String getCountry(){return "";};
+	public String getCountry(){
+            return this.country;
+        };
 	
 	//State Get/Set
-	public boolean setState(String newState){return true;};
+	public void setState(String newState){
+            this.state = newState;
+        };
 	
-	public String getState(){return  "";};
+	public String getState(){
+            return this.state;
+        };
 	
 	//City Get/Set
-	public boolean setCity(String newCity){return true;};
+	public void setCity(String newCity){
+            this.city = newCity;
+        };
 	
-	public String getCity(){return  "";};
+	public String getCity(){
+            return  this.city;
+        };
 	
 	//Neighboorhood get/set
-	public boolean setNeighboorhood(String newNeighboorhood){return true;};
+	public void setNeighboorhood(String newNeighboorhood){
+            this.neighboorhood = newNeighboorhood; 
+        };
 	
-	public String getNeighboorhood(){return  "";};
+	public String getNeighboorhood(){
+            return this.neighboorhood;
+        };
 	
 	//Zip Get/Set
-	public boolean setZip(String newZip){return true;};
+	public void setZip(String newZip){
+            this.zip = newZip;
+        };
 	
-	public String getZip(){return  "";};
+	public String getZip(){
+            return this.zip;
+        };
 	
 	//Street get/set
-	public boolean setStreet(String newStreet){return true;};
+	public void setStreet(String newStreet){
+            this.street = newStreet;
+        };
 	
-	public String getStreet(){return  "";};
+	public String getStreet(){
+            return this.street;
+        };
 	
 	//Number get/set
-	public boolean setNumber(int newNumber){return true;};
+	public void setNumber(int newNumber){
+            this.number = newNumber;
+        };
 	
-	public int getNumber(){return 1;};
+	public int getNumber(){
+            return this.number;
+        };
 	
 	//Complement get/set
-	public boolean setComplement(String newComplement){return true;};
+	public void setComplement(String newComplement){
+            this.complement = newComplement;
+        };
 	
-	public String getComplement(){return  "";};
+	public String getComplement(){
+            return this.complement;
+        };
 	
 	
 	
